@@ -1,0 +1,22 @@
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Secrets
+.env
+
+# Local datasets
+data/raw/*
+data/processed/*
+
+# Preserve empty directories
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Editor and OS
+.vscode/
+.DS_Store
+Thumbs.db
