@@ -83,6 +83,8 @@ Opening statistics compare actual and expected scores, with a minimum game-count
 chess-dna/
 ├── app.py
 ├── requirements.txt
+├── scripts/
+│   └── generate_demo_data.py
 ├── src/
 │   └── chess_dna/
 │       ├── __init__.py
@@ -92,8 +94,12 @@ chess-dna/
 ├── tests/
 │   └── test_chess_dna.py
 ├── data/
+│   ├── demo/
+│   │   └── games.csv
 │   ├── raw/
 │   └── processed/
+├── docs/
+│   └── dashboard.png
 └── README.md
 ```
 
@@ -159,6 +165,16 @@ This repository does not include my raw PGN file or processed game datasets. Gam
 
 The project uses the Lichess API to retrieve games associated with a specified account. Review the API documentation and applicable terms before using the project for other purposes.
 
+The dashboard automatically uses the local processed dataset when available. Otherwise, it loads the synthetic dataset included in `data/demo/`. The public Streamlit deployment uses synthetic data, allowing visitors to explore the dashboard without accessing personal game records.
+
+To regenerate the synthetic dataset locally, run:
+
+```bash
+python scripts/generate_demo_data.py
+```
+
+To run the dashboard with personal data, first execute the extraction and transformation steps described above. Personal raw and processed datasets remain excluded from version control.
+
 ## Limitations
 
 - The analysis is descriptive and does not establish causal relationships.
@@ -172,7 +188,6 @@ The project uses the Lichess API to retrieve games associated with a specified a
 - Improve rating trend calculations using precise game timestamps.
 - Explore move-level patterns and blunder analysis using chess-engine evaluations.
 - Add further automated data-quality checks.
-- Publish a demo with a separate, non-personal sample dataset.
 
 ## Author
 
