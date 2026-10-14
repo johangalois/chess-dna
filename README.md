@@ -8,6 +8,13 @@ An end-to-end personal analytics project exploring chess performance through rea
 
 Explore the interactive dashboard to analyze results, performance by color, rating progression, opponent strength, and opening performance.
 
+
+## Live Demo
+
+**[Launch Chess DNA Dashboard](https://chess-dna-ketmnxdnzaqk9ycxu77iek.streamlit.app/)**
+
+Explore an interactive dashboard built with Python, Pandas, Plotly, and Streamlit. The public demo uses 600 synthetic chess games to demonstrate performance analytics without exposing personal game data.
+
 ## Overview
 
 Chess DNA turns my Lichess rapid games into an interactive analytics dashboard. The project demonstrates how raw data can be collected, transformed, validated, analyzed, and presented to support evidence-based decisions.
