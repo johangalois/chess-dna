@@ -4,4 +4,4 @@ pandas
 python-chess
 streamlit
 plotly
-
+numpy
